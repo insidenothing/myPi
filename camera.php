@@ -1,4 +1,5 @@
 <?php
+/*
 $now = time();
 ob_start();
 echo '<pre>';
@@ -16,6 +17,7 @@ echo '
 <hr />Last line of the output: ' . $last_line . '
 <hr />Return value: ' . $retval;
 $debug = ob_get_clean();
+*/
 ?>
-<img height="480" width="680" src="<?PHP echo $now;?>.jpg" />
+<img height="480" width="680" src="cam.jpg" />
 <meta http-equiv="refresh" content="60">
