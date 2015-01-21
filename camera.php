@@ -1,5 +1,6 @@
 <?php
 $now = time();
+ob_start();
 echo '<pre>';
 // -n no preview
 // -o output file
@@ -14,5 +15,6 @@ echo '
 </pre>
 <hr />Last line of the output: ' . $last_line . '
 <hr />Return value: ' . $retval;
+$debug = ob_get_clean();
 ?>
 <img src="<?PHP echo $now;?>.jpg" />
