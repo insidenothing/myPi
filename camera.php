@@ -17,5 +17,5 @@ echo '
 <hr />Return value: ' . $retval;
 $debug = ob_get_clean();
 ?>
-<img src="<?PHP echo $now;?>.jpg" />
+<img height="480" width="680" src="<?PHP echo $now;?>.jpg" />
 <meta http-equiv="refresh" content="5">
