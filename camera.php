@@ -18,3 +18,4 @@ echo '
 $debug = ob_get_clean();
 ?>
 <img src="<?PHP echo $now;?>.jpg" />
+<meta http-equiv="refresh" content="5">
