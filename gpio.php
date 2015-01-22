@@ -9,10 +9,7 @@ echo '<pre>';
 $last_line = system('/usr/bin/sudo /root/wiringPi/gpio/gpio readall', $retval);
 
 // Printing additional info
-echo '
-</pre>
-<hr />Last line of the output: ' . $last_line . '
-<hr />Return value: ' . $retval;
+echo '</pre>';
 
 function pin_out($pin,$power){
   $cmd = "/usr/bin/sudo /root/wiringPi/gpio/gpio -g write $pin $power";
