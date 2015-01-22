@@ -17,7 +17,7 @@ $i = 0;
 $init = "gpio -g mode $pin out";
 $last_line = system($init, $retval);
 while ($i < 10){
-  $i++
+  $i++;
   $power= (i % 2 == 0) ? '0' : '1';
   pin_out($pin,$power);
 }
