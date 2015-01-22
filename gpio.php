@@ -3,7 +3,7 @@
 
 
 function pin_out($pin,$power){
-  $cmd = "sudo /root/wiringPi/gpio -g write $pin $power";
+  $cmd = "/usr/bin/sudo /root/wiringPi/gpio -g write $pin $power";
   $last_line = system($cmd, $retval);
 }
 
@@ -14,7 +14,7 @@ $off = 0;
 $x = 0;
 
 
-$init = "sudo /root/wiringPi/gpio -g mode $pin out";
+$init = "/usr/bin/sudo /root/wiringPi/gpio -g mode $pin out";
 $last_line = system($init, $retval);
 while ($x < 3){
   $x++;
@@ -29,7 +29,7 @@ echo '<pre>';
 // Outputs all the result of shellcommand "ls", and returns
 // the last output line into $last_line. Stores the return value
 // of the shell command in $retval.
-$last_line = system('sudo /root/wiringPi/gpio readall', $retval);
+$last_line = system('/usr/bin/sudo /root/wiringPi/gpio readall', $retval);
 
 // Printing additional info
 echo '
