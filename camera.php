@@ -1,23 +1,18 @@
 <?php
-/*
-$now = time();
+if(isset($_GET['still'])){
 ob_start();
-echo '<pre>';
 // -n no preview
 // -o output file
-$cmd = "raspistill -md 7 -o  $now.jpg &";
+$cmd = "raspistill -md 7 -o  cam.jpg";
 // Outputs all the result of shellcommand "ls", and returns
 // the last output line into $last_line. Stores the return value
 // of the shell command in $retval.
 $last_line = system($cmd, $retval);
 
 // Printing additional info
-echo '
-</pre>
-<hr />Last line of the output: ' . $last_line . '
-<hr />Return value: ' . $retval;
 $debug = ob_get_clean();
-*/
+}
+
 ?>
-<img height="480" width="680" src="cam.jpg" />
+<img height="768" width="1024" src="cam.jpg" />
 <meta http-equiv="refresh" content="60">
