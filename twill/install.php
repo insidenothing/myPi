@@ -27,7 +27,7 @@ if (!file_exists($installDir.$file)){
 
 
 
-$uncompress = "tar xvfz $installDir.$file";
+$uncompress = "tar -C $installDir xvfz $installDir.$file";
 exec($uncompress);
 
 
