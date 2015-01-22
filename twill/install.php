@@ -1,7 +1,5 @@
 <?PHP
-
 $installDir = '/opt/twill';
-
 if (!file_exists($installDir))
 {
   mkdir ($installDir,0777);
@@ -9,10 +7,6 @@ if (!file_exists($installDir))
 }else{
   echo "<li>Install Folder Ready</li>";
 }
-
-
-
-
 $file = "/twill-0.9.tar.gz";
 $command = "wget -P $installDir http://darcs.idyll.org/~t/projects$file";
 if (!file_exists($installDir.$file)){
@@ -24,23 +18,11 @@ if (!file_exists($installDir.$file)){
 }else{
   echo "<li>Downloded Ready</li>";
 }
-
-
-
-$uncompress = "/bin/tar xvfz $installDir$file -C $installDir";
-
-
-echo '<pre>';
-
-// Outputs all the result of shellcommand "ls", and returns
-// the last output line into $last_line. Stores the return value
-// of the shell command in $retval.
-$last_line = system($uncompress, $retval);
-
-// Printing additional info
-echo '
-</pre>
-<hr />Last line of the output: ' . $last_line . '
-<hr />Return value: ' . $retval;
-
+if(!file_exists('/opt/twill/twill-0.9/twill-sh')){
+  $uncompress = "/bin/tar xvfz $installDir$file -C $installDir";
+  exec($uncompress);
+  echo "<li>Twill Installed</li>";
+}else{
+  echo "<li>Twill Install Complete</li>";
+}
 ?>
