@@ -11,14 +11,14 @@ function pin_out($pin,$power){
 $pin = 17;
 $on = 1;
 $off = 0;
-$i = 0;
+$x = 0;
 
 
 $init = "gpio -g mode $pin out";
 $last_line = system($init, $retval);
-while ($i < 10){
-  $i++;
-  $power= (i % 2 == 0) ? '0' : '1';
+while ($x < 10){
+  $x++;
+  $power= ($x % 2 == 0) ? '0' : '1';
   pin_out($pin,$power);
 }
 
