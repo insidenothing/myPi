@@ -1,0 +1,6 @@
+<?PHP
+
+$installDir = '/opt/twill';
+
+
+?>
