@@ -31,7 +31,7 @@ if (isset($_GET['blink'])){
     $power= ($x % 2 == 0) ? '0' : '1';
     pin_out($pin,$power);
   }
-  header('Location: gpio.php');
+  die();
 }
 
 
