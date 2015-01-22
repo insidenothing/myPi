@@ -25,4 +25,11 @@ if (!file_exists($installDir.$file)){
   echo "<li>Downloded Ready</li>";
 }
 
+
+
+$uncompress = "tar xvfz $installDir.$file";
+exec($uncompress);
+
+
+
 ?>
